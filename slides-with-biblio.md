@@ -164,5 +164,51 @@ We conducted an independent samples t-test to assess if there is a significant d
 ::::
 
 ---
+
+:::: {.columns}
+::: {.column width="50%"}
+### PartResistance by Pressure for Machine 1
+This boxplot illustrates the distribution of `PartResistance` across different `Pressure` levels specifically for `Machine 1`. This visualization helps to identify how varying pressure conditions affect the part resistance produced by this particular machine.
+
+**Key Observations:**
+- We can observe the median, spread, and potential outliers of `PartResistance` at each pressure setting.
+- The plot helps in understanding the central tendency and variability of `PartResistance` as `Pressure` changes.
+:::
+
+::: {.column width="50%"}
+<iframe data-src='media/plots/partresistance_by_pressure_machine1_boxplot.html' width='100%' height='500px' style='border:none;'></iframe>
+:::
+
+::::
+
+---
+
+:::: {.columns}
+::: {.column width="50%"}
+### ANOVA for PartResistance by Pressure (Machine 1)
+We performed an ANOVA to investigate the effect of `Pressure` on `PartResistance` specifically for `Machine 1`. The ANOVA tests if there are statistically significant differences between the means of `PartResistance` across the different `Pressure` levels.
+
+**ANOVA Results:**
+
+- **Pr(>F) for Pressure_Factor**: 9.175118521470793e-63
+
+Given the extremely low p-value (Pr(>F)), we can conclude that there is a highly significant effect of Pressure on PartResistance for Machine 1.
+:::
+
+::: {.column width="50%"}
+<!-- Optionally, you can include the R code for the ANOVA here or a summary table if needed -->
+```R
+# R code for ANOVA
+library(stats)
+
+# Assuming x025_machine1 and Pressure_Factor are defined
+anova_result <- aov(PartResistance ~ Pressure_Factor, data = x025_machine1)
+summary(anova_result)
+```
+:::
+
+::::
+
+---
 # Bibliography
 <div id="refs"></div>
