@@ -169,3 +169,30 @@ summary(anova_result)
 :::
 
 ::::
+
+---
+
+:::: {.columns}
+::: {.column width="50%"}
+### ANOVA for PartResistance by Pressure * Temperature (Machine 1)
+We performed an ANOVA to investigate the interactive effect of `Pressure` and `Temperature` on `PartResistance` specifically for `Machine 1`. This ANOVA tests if the effect of one factor (e.g., Pressure) on `PartResistance` depends on the level of the other factor (Temperature).
+
+**ANOVA Results:**
+
+- **Pr(>F) for Pressure_Factor:Temperature_Factor interaction**: 0.5890634081802586
+
+This low p-value suggests a significant interaction effect between Pressure and Temperature on PartResistance for Machine 1, meaning their combined effect is not simply additive.
+
+### PartResistance by Pressure:Temperature Interaction (Machine 1)
+This boxplot illustrates the distribution of `PartResistance` across various combinations of `Pressure` and `Temperature` for `Machine 1`. Visualizing the interaction helps to understand how different environmental conditions jointly influence the part resistance.
+
+**Key Observations:**
+- Each boxplot represents a unique combination of Pressure and Temperature.
+- This plot allows us to identify specific Pressure-Temperature pairs that might lead to optimal or problematic PartResistance values.
+:::
+
+::: {.column width="50%"}
+<iframe data-src='media/plots/partresistance_by_pt_interact_machine1_boxplot.html' width='100%' height='500px' style='border:none;'></iframe>
+:::
+
+::::
