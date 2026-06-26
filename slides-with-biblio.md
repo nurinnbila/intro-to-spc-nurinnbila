@@ -209,7 +209,6 @@ summary(anova_result)
 :::
 
 ::::
-
 ---
 # Bibliography
 <div id="refs"></div>
